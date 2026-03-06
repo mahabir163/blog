@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}DailyDrafts || Pricing{% endblock %}
+
+{% block content %}
+<!-- Pricing Heading -->
+<section class="bg-gradient-to-b from-blue-200 to-white py-12">
+  <div class="mt-10 justify-center">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-black">Pricing</h1>
+      <p class="mt-4 text-lg text-black-600">
+        Choose the plan that's right for you.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Cards -->
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="grid gap-8 md:grid-cols-2">
+    <!-- Basic Plan -->
+    <div class="rounded-lg border bg-white p-6 shadow-md">
+      <h2 class="text-xl font-semibold text-gray-900">Basic</h2>
+      <p class="mt-4 text-gray-600">₹50/month</p>
+      <ul class="mt-6 space-y-4 text-gray-600">
+        <li>Access to basic drafts</li>
+        <li>Limited storage</li>
+        <li>No email support</li>
+      </ul>
+
+      <!-- Buy Now Button -->
+    <div class="mb-4 flex justify-center">
+        <a href="#" class="inline-block rounded-md bg-blue-600 py-2 px-4 text-center text-white hover:bg-blue-700">
+            Buy Now
+        </a>
+    </div>
+    </div>
+
+    <!-- End Basic Plan -->
+
+    <!-- Pro Plan -->
+    <div class="rounded-lg border bg-white p-6 shadow-md">
+        <h2 class="text-xl font-semibold text-gray-900">Pro</h2>
+        <p class="mt-4 text-gray-600">₹100/month</p>
+        <ul class="mt-6 space-y-4 text-gray-600">
+        <li>Access to all drafts</li>
+        <li>unlimited storage</li>
+        <li>Email Support</li>
+        </ul>
+
+        <!-- Buy Now Button -->
+        <div class="mb-4 flex justify-center">
+            <a href="#" class="inline-block rounded-md bg-blue-600 py-2 px-4 text-center text-white hover:bg-blue-700">
+                Buy Now
+            </a>
+        </div>
+
+    </div>
+    <!--End Pro Plan-->
+  </div>
+    <!-- End Grid -->
+</div>
+{% endblock content %}
+

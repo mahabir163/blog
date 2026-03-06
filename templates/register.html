@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}DailyDrafts || Register{% endblock %}
+
+{% block content %}
+<!-- Login Heading -->
+<section class="bg-gradient-to-b from-blue-200 to-white py-12">
+  <div class="mt-10 justify-center">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-black">Register</h1>
+      <p class="mt-4 text-lg text-black-600">
+        Welcome to our plartform! Please register to create your account and start sharing your thoughts with the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Register Form -->
+<div class="flex">
+    
+
+    <!--form card on left side-->
+    <div class="w-full md:w-1/2 md:block border rounded-lg shadow-xl overflow-hidden mx-5 my-5">
+        <span class="block text-center text-xl font-bold text-gray-800 mt-5">Create Your Account</span>
+        <div class="mx-auto max-w-md px-6 py-12">
+            <form action="{% url 'register' %}" method="POST" class="bg-white rounded-lg shadow-md p-8">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                    <input type="text" placeholder="Enter your username" name="username" id="username" required class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input type="password" placeholder="Enter your password" name="password" id="password" required class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                </div>
+
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Confirm your Password</label>
+                    <input type="password" placeholder="Confirm your password" name="password" id="password" required class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Enter Your Email</label>
+                    <input type="email" placeholder="example@domain.com" name="email" id="email" required class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 py-2 px-4 rounded-lg text-white hover:bg-blue-700">Login</button>
+            </form>
+        </div>
+
+        <!--Or using google or facebook-->
+        <div>
+            <p class="text-center text-gray-600">Or Register with</p>
+            <div class="flex justify-center mt-4 space-x-4">
+                <a href="#" class="bg-red-600 px-4 py-2 rounded-lg text-white hover:bg-red-700">Google</a>
+                <a href="#" class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700">Facebook</a>
+            </div>
+        </div>
+
+        <!--login Link-->
+        <div class="text-center mt-4">
+            <p class="text-gray-600 text-sm">
+                Already have an account? <a href="{% url 'login' %}" class="text-blue-600 hover:underline">Login here</a>
+            </p>
+        </div>
+
+        <!--Notice-->
+        <div class="mt-6 px-4 py-3 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700">
+            <p class="text-gray-600 text-sm">
+                Keep your account information secure.
+            </p>
+            <p class="text-gray-600 text-sm">
+                Do not share your password with anyone.
+            </p>
+            <p class="text-gray-600 text-sm">
+                If you forget your password, use the "Forgot Password" option to reset it.
+            </p>
+            <a href="#" class="text-blue-600 hover:underline">Forgot Password?</a>
+        </div>
+
+        
+    </div>
+    <!--end of form-->
+
+    <!--images card on left side-->
+    <div class="w-full hidden md:w-1/2 md:block border rounded-lg shadow-xl overflow-hidden mx-5 my-5">
+        <img src="{% static 'images/bg3.jpg' %}" class="w-full h-screen object-cover">
+    </div>
+
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% load static %}
+<!-- Floating Bot Button -->
+<div class="fixed bottom-6 right-6 z-50">
+
+    <!-- Bot Image Button -->
+    <img 
+        src="{% static 'images/bot.png' %}" 
+        id="botButton"
+        class="w-16 h-16 cursor-pointer rounded-full shadow-lg hover:scale-110 transition"
+        alt="Chat Bot"
+    >
+</div>
+
+<!-- Chat Window -->
+<div id="chatWindow" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-xl shadow-2xl border z-50">
+
+    <!-- Header -->
+    <div class="bg-blue-600 text-white p-3 rounded-t-xl flex justify-between items-center">
+        <span class="font-semibold">DailyDraft Bot</span>
+        <button id="closeChat">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="h-64 p-3 overflow-y-auto text-sm">
+        <p class="text-gray-500">Hello 👋 How can I help you?</p>
+    </div>
+
+    <!-- Input -->
+    <div class="border-t p-2 flex">
+        <input 
+            type="text"
+            placeholder="Type message..."
+            class="flex-1 border rounded-lg px-2 py-1 text-sm"
+        >
+        <button class="ml-2 bg-blue-600 text-white px-3 rounded-lg">
+            Send
+        </button>
+    </div>
+
+</div>
+
+<script src="{% static 'js/bot.js' %}"></script>
+
+
+
+
